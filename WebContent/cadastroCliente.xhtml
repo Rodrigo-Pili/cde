@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<header>
+	<title>Cadastro Cliente</title>
+</header>
+
+<h:body>
+	<h1>Cadastro De Cliente</h1>
+	<h:form>
+		<fieldset>
+			<legend>Cadastro</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome: " for="nome_cliente" />
+				<h:inputText id="nome_cliente" value="#{cadastroClienteBean.cliente.nome_cliente}" autocomplete="off" required="false"/>
+				<h:outputLabel value="Login: " for="login_cliente" />
+				<h:inputText id="login_cliente" value="#{cadastroClienteBean.cliente.login_cliente}" autocomplete="off" required="false"/>
+				<h:outputLabel value="Senha: " for="senha_cliente" />
+				<h:inputSecret id="senha_cliente" value="#{cadastroClienteBean.cliente.senha_cliente}" autocomplete="off" required="false"/>
+				<h:outputLabel value="Email: " for="email_cliente" />
+				<h:inputText id="email_cliente" value="#{cadastroClienteBean.cliente.email_cliente}" autocomplete="off"/>
+				<h:commandButton value="Salvar" action="#{cadastroClienteBean.salvar}" />
+				<h:commandButton value="Voltar"	action="#{cadastroClienteBean.voltar}" />
+				<h:messages id="msgErro" style="color:red" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+
+</html>

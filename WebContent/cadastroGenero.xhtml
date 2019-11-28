@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<header>
+	<title>Cadastro Genero</title>
+</header>
+
+<h:body>
+	<h:form>
+		<h:panelGroup rendered="#{not empty funcionario}">
+			<p>Funcionario: <b>#{funcionario.nome_funcionario}</b></p>
+		</h:panelGroup>
+		<fieldset>
+			<legend>Cadastro de Gênero</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome: " for="nome_genero" />
+				<h:inputText id="nome_genero" value="#{generoBean.genero.nome_genero}" autocomplete="off" required="false"/>
+				<h:commandButton value="Salvar" action="#{generoBean.salvar}" />
+				<h:commandButton value="Voltar" action="#{funcionarioBean.voltarPrincipal}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+
+</html>

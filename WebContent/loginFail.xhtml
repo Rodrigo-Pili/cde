@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<header>
+	<title>LoginFail</title>
+</header>
+
+<h:body>
+	<p>Cliente não encontrado.</p>
+	<p>Clique em voltar e faça o login novamente, ou clique em cadastrar caso não tenha cadastro ainda.</p>
+	<h:form>
+		<fieldset>
+			<legend>Opções</legend>
+			<h:panelGrid columns="2">
+				<h:commandButton value="Voltar"
+					action="#{cadastroClienteBean.voltar}" />
+				<h:commandButton value="Cadastrar"
+					action="#{cadastroClienteBean.cadastrar}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+
+</html>
