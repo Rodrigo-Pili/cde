@@ -28,6 +28,15 @@ public class FuncionarioBean {
 		}
 	}
 	
+	public void cadastroLivro() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastroLivro.xhtml");
+		} catch (IOException e) {
+			System.out
+					.println("Não foi possível redirecionar para a página - cadastroLivro.xhtml - " + e.getMessage());
+		}
+	}	
+	
 	public void cadastroEditora() {
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastroEditora.xhtml");

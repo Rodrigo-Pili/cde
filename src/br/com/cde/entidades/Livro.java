@@ -9,6 +9,15 @@ public class Livro {
 	private Integer cod_genero;
 	private Integer cod_funcionario;
 	private Integer cod_editora;
+	private Integer qtd_livros;
+	
+	public Integer getQtd_livros() {
+		return qtd_livros;
+	}
+
+	public void setQtd_livros(Integer qtd_livros) {
+		this.qtd_livros = qtd_livros;
+	}
 
 	public Integer getCod_livro() {
 		return cod_livro;
