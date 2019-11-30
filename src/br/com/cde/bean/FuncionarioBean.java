@@ -12,11 +12,20 @@ import br.com.cde.entidades.Funcionario;
 @ManagedBean
 public class FuncionarioBean {
 
-	private Funcionario funcionario = new Funcionario();
+	private static Funcionario funcionario = new Funcionario();
 	private FuncionarioDAO dao = new FuncionarioDAO();
 
 	public Funcionario getFuncionario() {
 		return funcionario;
+	}
+	
+	public void cadastroAutor() {
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("cadastroAutor.xhtml");
+		} catch (IOException e) {
+			System.out
+					.println("Não foi possível redirecionar para a página - cadastroAutor.xhtml - " + e.getMessage());
+		}
 	}
 	
 	public void voltarTelaPrincipal() {
