@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<header>
+	<title>Cadastro Autor</title>
+</header>
+
+<h:body>
+	<h:form>
+		<h:panelGroup rendered="#{not empty funcionario}">
+			<p>Funcionario: <b>#{funcionario.nome_funcionario}</b></p>
+		</h:panelGroup>
+		<fieldset>
+			<legend>Cadastro de Autor</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Nome: " for="nome_autor" />
+				<h:inputText id="nome_autor" value="#{autorBean.autor.nome_autor}" autocomplete="off" required="false"/>
+				<h:commandButton value="Salvar" action="#{autorBean.salvar}" />
+				<h:commandButton value="Voltar" actionListener="#{funcionarioBean.voltarTelaPrincipal}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+
+</html>

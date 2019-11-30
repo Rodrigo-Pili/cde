@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<header>
+	<title>Cadastro Livro</title>
+</header>
+
+<h:body>
+	<h:panelGroup rendered="#{not empty funcionario}">
+		<p>Funcionario: <b>#{funcionario.nome_funcionario}</b></p>
+	</h:panelGroup>
+	<h:form>
+		<fieldset>
+			<legend>Cadastro de Livro</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Titulo :" for="titulo_livro"/>
+				<h:inputText id="titulo_livro" value="#{livroBean.livro.titulo_livro}" autocomplete="off" required="false"/>
+				<h:outputLabel value="Descrição :" for="descricao_livro" />
+				<h:inputText id="descricao_livro" value="#{livroBean.livro.descricao_livro}" autocomplete="off" required="false" />
+				<h:outputLabel value="Preço :" for="preco_livro" />
+				<h:inputText id="preco_livro" value="#{livroBean.livro.preco_livro}" autocomplete="off" required="false" />
+				<h:outputLabel value="Genero :" for="cod_genero" />
+				<h:inputText id="cod_genero" value="#{livroBean.livro.cod_genero}" autocomplete="off" required="false" />
+				<h:outputLabel value="Editora :" for="cod_editora" />
+				<h:inputText id="cod_editora" value="#{livroBean.livro.cod_editora}" autocomplete="off" required="false"/>
+				<h:outputLabel value="Total de livros :" for="qtd_livros" />
+				<h:inputText id="qtd_livros" value="#{livroBean.livro.qtd_livros}" autocomplete="off" required="false"/>
+				<h:commandButton value="salvar" action="#{livroBean.salvar}" />
+				<h:commandButton value="Voltar" action="#{funcionarioBean.voltarPrincipal}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
+</h:body>
+</html>

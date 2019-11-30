@@ -5,10 +5,26 @@ public class Livro {
 	private Integer cod_livro;
 	private String titulo_livro;
 	private String descricao_livro;
-	private float preco;
+	private float preco_livro;
 	private Integer cod_genero;
 	private Integer cod_funcionario;
 	private Integer cod_editora;
+	private Integer qtd_livros;
+	
+	public float getPreco_livro() {
+		return preco_livro;
+	}
+	
+	public void setPreco_livro(float preco_livro) {
+		this.preco_livro = preco_livro;
+	}
+	public Integer getQtd_livros() {
+		return qtd_livros;
+	}
+
+	public void setQtd_livros(Integer qtd_livros) {
+		this.qtd_livros = qtd_livros;
+	}
 
 	public Integer getCod_livro() {
 		return cod_livro;
@@ -34,13 +50,7 @@ public class Livro {
 		this.descricao_livro = descricao_livro;
 	}
 
-	public float getPreco() {
-		return preco;
-	}
 
-	public void setPreco(float preco) {
-		this.preco = preco;
-	}
 
 	public Integer getCod_genero() {
 		return cod_genero;
